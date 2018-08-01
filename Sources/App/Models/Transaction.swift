@@ -11,13 +11,15 @@ import FluentSQLite
 
 final class Transaction: Codable {
 	var id: UUID?
+	var accountId: Account.ID
 	var date: Date
 	var description: String
 	var amount: Decimal
 	var createdAt: Date
 	var updatedAt: Date
 
-	init(date: Date, description: String, amount: Decimal, createdAt: Date, updatedAt: Date) {
+	init(accountId: Account.ID, date: Date, description: String, amount: Decimal, createdAt: Date, updatedAt: Date) {
+		self.accountId = accountId
 		self.date = date
 		self.description = description
 		self.amount = amount
@@ -38,7 +40,7 @@ extension Transaction: Migration {
 //	}
 }
 extension Transaction {
-//	var products: Children<Transaction, Product> {
-//		return children(\.TransactionId)
-//	}
+	var account: Parent<Transaction, Account> {
+		return parent(\.accountId)
+	}
 }
