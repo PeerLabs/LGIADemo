@@ -32,6 +32,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
 	migrations.add(model: Balance.self, database: .sqlite)
 	migrations.add(model: AssetAllocation.self, database: .sqlite)
 	migrations.add(model: Apportion.self, database: .sqlite)
+	migrations.add(migration: DefaultData.self, database: .sqlite)
     services.register(migrations)
 
 }
