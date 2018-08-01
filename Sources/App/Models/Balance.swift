@@ -13,14 +13,16 @@ final class Balance: Codable {
 	var id: UUID?
 	var accountId: Account.ID
 	var date: Date
+	var description: String
 	var value: Decimal
 	var notes: String?
 	var createdAt: Date
 	var updatedAt: Date
 
-	init(accountId: Account.ID, date: Date, value: Decimal, notes: String?, createdAt: Date, updatedAt: Date) {
+	init(accountId: Account.ID, description: String, date: Date, value: Decimal, notes: String?, createdAt: Date, updatedAt: Date) {
 		self.accountId = accountId
 		self.date = date
+		self.description = description
 		self.value = value
 		self.notes = notes ?? ""
 		self.createdAt = createdAt
