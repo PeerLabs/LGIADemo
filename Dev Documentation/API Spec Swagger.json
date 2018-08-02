@@ -1,0 +1,93 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API Spec.paw",
+    "version": "v0.0.0"
+  },
+  "host": "ec2-13-237-253-4.ap-southeast-2.compute.amazonaws.com:8080",
+  "schemes": [
+    "http"
+  ],
+  "basePath": "/api/accounts",
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Get List of Accounts",
+        "description": "",
+        "operationId": "a5782855-c6e8-4422-b640-9574d7480d26",
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        },
+        "parameters": []
+      }
+    },
+    "/<Acc ID>": {
+      "get": {
+        "summary": "Get Account",
+        "description": "",
+        "operationId": "fc61286b-d1db-45e0-8ca6-da9bb5b509b8",
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        },
+        "parameters": []
+      }
+    },
+    "/<Acc ID>/transactions": {
+      "get": {
+        "summary": "Get Account Transactions",
+        "description": "",
+        "operationId": "0c5355fe-3b8a-49b4-8c85-9b385eb5297b",
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        },
+        "parameters": []
+      }
+    },
+    "/<Acc ID>/balances": {
+      "get": {
+        "summary": "Get Account Balances",
+        "description": "",
+        "operationId": "9efd6b15-f96c-4382-9248-1bbabaa43a92",
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        },
+        "parameters": []
+      }
+    },
+    "/<Acc ID>/assets": {
+      "get": {
+        "summary": "Get Account Assets",
+        "description": "",
+        "operationId": "4c5a9d9c-03c6-47b7-9d0d-6c458b7081d7",
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        },
+        "parameters": []
+      }
+    },
+    "/<Acc ID>/strategies": {
+      "get": {
+        "summary": "Get Account Investment Strategies",
+        "description": "",
+        "operationId": "f998657c-e687-485d-9b1b-3a59c4da01f6",
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        },
+        "parameters": []
+      }
+    }
+  },
+  "tags": []
+}

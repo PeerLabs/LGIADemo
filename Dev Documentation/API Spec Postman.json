@@ -1,0 +1,56 @@
+{
+  "info": {
+    "name": "API Spec.paw",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "version": "v0.0.0"
+  },
+  "item": [
+    {
+      "name": "LGIADemo",
+      "item": [
+        {
+          "name": "Get List of Accounts",
+          "request": {
+            "url": "http://ec2-13-237-253-4.ap-southeast-2.compute.amazonaws.com:8080/api/accounts",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Get Account",
+          "request": {
+            "url": "http://ec2-13-237-253-4.ap-southeast-2.compute.amazonaws.com:8080/api/accounts/<Acc ID>",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Get Account Transactions",
+          "request": {
+            "url": "http://ec2-13-237-253-4.ap-southeast-2.compute.amazonaws.com:8080/api/accounts/<Acc ID>/transactions",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Get Account Balances",
+          "request": {
+            "url": "http://ec2-13-237-253-4.ap-southeast-2.compute.amazonaws.com:8080/api/accounts/<Acc ID>/balances",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Get Account Assets",
+          "request": {
+            "url": "http://ec2-13-237-253-4.ap-southeast-2.compute.amazonaws.com:8080/api/accounts/<Acc ID>/assets",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Get Account Investment Strategies",
+          "request": {
+            "url": "http://ec2-13-237-253-4.ap-southeast-2.compute.amazonaws.com:8080/api/accounts/<Acc ID>/strategies",
+            "method": "GET"
+          }
+        }
+      ]
+    }
+  ]
+}

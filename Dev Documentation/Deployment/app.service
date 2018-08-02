@@ -11,7 +11,7 @@ After=syslog.target
 [Service]
 User=ubuntu
 WorkingDirectory=/home/ubuntu/app
-ExecStart=/home/ubuntu/app/.build/release/Run --env=production
+ExecStart=/home/ubuntu/app/.build/release/Run --env=production --port 8080 --hostname 172.31.5.34
 Restart=on-abort
 
 #Type=idle
