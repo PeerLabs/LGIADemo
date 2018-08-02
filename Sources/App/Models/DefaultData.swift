@@ -98,31 +98,31 @@ struct DefaultData: Migration {
 		var balances = [Balance]()
 
 		// 30/6/2013	YTD Balance	494522	C
-		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2013")!, value: 494522, notes: nil, createdAt: Date(), updatedAt: Date()))
+		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2013")!, value: 494522, isProjected: false, notes: nil, createdAt: Date(), updatedAt: Date()))
 
 		// 30/6/2014	YTD Balance	521083	C
-		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2014")!, value: 521083, notes: nil, createdAt: Date(), updatedAt: Date()))
+		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2014")!, value: 521083, isProjected: false, notes: nil, createdAt: Date(), updatedAt: Date()))
 
 		// 30/6/2015	YTD Balance	538742	C
-		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2015")!, value: 538742, notes: nil, createdAt: Date(), updatedAt: Date()))
+		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2015")!, value: 538742, isProjected: false, notes: nil, createdAt: Date(), updatedAt: Date()))
 
 		// 30/6/2016	YTD Balance	587324	C
-		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2016")!, value: 587324, notes: nil, createdAt: Date(), updatedAt: Date()))
+		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2016")!, value: 587324, isProjected: false, notes: nil, createdAt: Date(), updatedAt: Date()))
 
 		// 30/6/2017	YTD Balance	601234	C
-		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2017")!, value: 601234, notes: nil, createdAt: Date(), updatedAt: Date()))
+		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2017")!, value: 601234, isProjected: false, notes: nil, createdAt: Date(), updatedAt: Date()))
 
 		// 30/6/2018	YTD Balance	622641	C
-		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2018")!, value: 622641, notes: nil, createdAt: Date(), updatedAt: Date()))
+		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2018")!, value: 622641, isProjected: false, notes: nil, createdAt: Date(), updatedAt: Date()))
 
 		// 30/6/2019	YTD Balance	653887	C	Projected
-		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2019")!, value: 653887, notes: "projected", createdAt: Date(), updatedAt: Date()))
+		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2019")!, value: 653887, isProjected: true, notes: "projected", createdAt: Date(), updatedAt: Date()))
 
 		// 30/6/2020	YTD Balance	680447	C	Projected
-		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2020")!, value: 680447, notes: "projected", createdAt: Date(), updatedAt: Date()))
+		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2020")!, value: 680447, isProjected: true, notes: "projected", createdAt: Date(), updatedAt: Date()))
 
 		// 30/6/2021	YTD Balance	707008	C	Projected
-		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2021")!, value: 707008, notes: "projected", createdAt: Date(), updatedAt: Date()))
+		balances.append(Balance(accountId: accountId, description: "YTD Balance", date: DefaultData.dateFormatter.date(from: "30/6/2021")!, value: 707008, isProjected: true, notes: "projected", createdAt: Date(), updatedAt: Date()))
 
 		for bal in balances {
 			let _ = bal.save(on: conn)
