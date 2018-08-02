@@ -1,0 +1,30 @@
+To access your instance:
+Open an SSH client. (find out how to connect using PuTTY)
+Locate your private key file (LGIADemo.pem). The wizard automatically detects the key you used to launch the instance.
+Your key must not be publicly viewable for SSH to work. Use this command if needed:
+chmod 400 LGIADemo.pem
+Connect to your instance using its Public DNS:
+ec2-52-65-139-215.ap-southeast-2.compute.amazonaws.com
+Example:
+ssh -i "LGIADemo.pem" ubuntu@ec2-52-65-139-215.ap-southeast-2.compute.amazonaws.com
+Please note that in most cases the username above will be correct, however please ensure that you read your AMI usage instructions to ensure that the AMI owner has not changed the default AMI username.
+
+--------------------------
+
+sudo su
+apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y && apt-get install htop -y
+apt-get install unattended-upgrades -y && dpkg-reconfigure -plow unattended-upgrades
+apt-get install ntp -y && ntpq -p && service ntp restart
+reboot
+
+eval "$(curl -sL https://apt.vapor.sh)"
+sudo apt-get install vapor -y
+
+scp -r app.service YOUR_SERVER_IP:/tmp/
+
+sudo mv /tmp/app.service /lib/systemd/system
+sudo chown root:root /lib/systemd/system/app.service
+sudo systemctl daemon-reload
+systemctl status app
+
+
